@@ -1,0 +1,44 @@
+
+mixin  cardShoe(imageLink,nameShoe)
+    .card
+        .img-case
+            img(src=imageLink, alt='giày' title='giày')
+        .content
+            h2=nameShoe
+section#galary.gallery
+        h1.title Xem bộ sưu tập của chúng tôi
+        .container
+            +cardShoe('./assets/image/shoes1.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes2.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes3.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes4.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes5.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes6.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes7.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes8.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes1.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes2.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes3.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes4.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes5.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes6.jpg','Slip-on-shoe')
+            +cardShoe('./assets/image/shoes7.jpg','Slip-on-shoe')
+                
+//- testst tí
+
+
+            }
+
+//- section#galary.gallery
+//-         h1.title Xem bộ sưu tập của chúng tôi
+//-         .container
+//-             -const shoes = {"./assets/image/shoes1.jpg":"Giày thể thao","./assets/image/shoes2.jpg":"Giày thể thao","./assets/image/shoes3.jpg":"Giày thể thao","./assets/image/shoes4.jpg":"Giày thể thao","./assets/image/shoes5.jpg":"Giày thể thao","./assets/image/shoes5.jpg":"Giày thể thao","./assets/image/shoes6.jpg":"Giày thể thao","./assets/image/shoes7.jpg":"Giày thể thao",}
+//-             for nameShoe, src in shoes
+//-                 .card
+//-                     .img-case
+//-                         img(src=src, alt='giày' title='giày')
+//-                     .content
+//-                         h2=nameShoe
+                
+            
+            

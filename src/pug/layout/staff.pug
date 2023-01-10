@@ -1,0 +1,26 @@
+mixin cardStaff(srcImage, name, office)
+    .card 
+        .content
+            .img-case
+                img(src=srcImage, alt='Nhân sự')
+            .content-case
+                h3=name 
+                p=office
+        .icon-case
+            .i-one
+                a(href='#')
+                    i.fa-brands.fa-facebook
+            .i-two
+                a(href='#')
+                    i.fa-brands.fa-instagram
+            .i-three
+                a(href='#')
+                    i.fa-brands.fa-twitter
+section.staff
+        h1.title Các thành viên của chúng tôi
+        .container
+            
+            +cardStaff('./assets/image/staff1.jpg','TOMMY','NGƯỜI SÁNG LẬP')
+            +cardStaff('./assets/image/staff2.jpg','MAI Nguyen','NGƯỜI ĐỒNG SÁNG LẬP')
+            +cardStaff('./assets/image/staff3.jpg','MINH TUAN','QUẢN LÝ')
+            +cardStaff('./assets/image/staff3.jpg','MINH QUYEN','CỘNG TÁC VIÊN')

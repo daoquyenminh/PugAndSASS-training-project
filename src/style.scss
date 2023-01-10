@@ -1,0 +1,61 @@
+
+@import './sass/base/_variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' ,'san-serif';
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $secondaryColor;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+
+}
+.btn {
+    position: relative;
+    color: $secondaryColor;
+    border: 2px $secondaryColor solid;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    
+
+}
+.btn:hover{
+    background: $secondaryColor;
+    color: $fisrtColor;
+}
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+@import './sass/layouts/_navigation.scss';
+@import './sass/layouts/_banner.scss';
+@import './sass/layouts/_gallery.scss';
+@import './sass/layouts/_staff.scss';
+@import './sass/layouts/_footer.scss';
+@media  screen and (max-width : 1200px) {
+    html {
+        font-size: 90%;
+    }
+}
+@media  screen and (max-width : 800px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+
+

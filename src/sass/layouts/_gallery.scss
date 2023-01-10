@@ -1,0 +1,89 @@
+@import '../base/_variables.scss';
+
+.gallery {
+    padding: 5rem;
+    .container{ 
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card{
+            position: relative;
+            width: 260px;
+            height: 260px;
+
+            margin: 4px;
+            border: 4px solid black;
+            .img-case {
+                @include absolute-item;
+                img {
+                    @include absolute-item;
+                    object-fit: cover;
+                }
+            }
+            .content {
+                @include absolute-item;
+                z-index: 1;
+                display: flex;
+                align-items: flex-end;
+                padding: 20px;
+                h2 {
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    transform: translateY(2rem);
+                    transition: 0.3s;
+                    opacity: 0;
+                }
+                p{
+                    color: white;
+                    transform: translateY(2rem);
+                    transition: 0.3s;
+                    opacity: 0;
+                }
+                .more {
+                    align-self: center  ;
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.gallery .container .card:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+    box-shadow: 0.25px 40px rgba($color: #000000, $alpha: 0.5) ;
+    z-index: 1;
+}
+
+.gallery .container .card:hover .content h2 {
+    transform: translate(0.5rem);
+    transition-delay: 0.4s;
+    opacity: 1;
+    
+}
+.gallery .container .card:hover .content p {
+    transform: translate(0.5rem);
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+.gallery .container .card .img-case::before {
+    content: "";
+    @include absolute-item;
+    background: linear-gradient(180deg, yellow,black);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+}
+.gallery .container .card:hover .img-case::before {
+    opacity: 0.6;
+}
+
+@media screen and ( max-width: 1200px) {
+    .gallery {
+        padding: 1rem ;
+    }
+}
+

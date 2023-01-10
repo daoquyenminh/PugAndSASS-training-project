@@ -1,0 +1,50 @@
+@import '../base/_variables.scss';
+
+.navigation {
+    background: $fisrtColor;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 20px rgba($color :$secondaryColor, $alpha:0.5);
+    z-index: 1000;
+    nav {
+        width: 80%;
+        margin: auto;
+        min-height: 10vh;
+        @include center-item;
+        ul {
+            @include center-item;
+            li{
+                border-radius: 5px;
+                 color: $secondaryColor;
+                padding:10px;
+                &:hover {
+                    background: $secondaryColor;
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+        #logo{
+            flex: 3;
+
+        }
+    
+    }    
+}
+
+@media  screen and (max-width : 1200px) {
+    nav {
+        #logo {
+            flex: 1;
+        }
+        ul {
+            li{
+                margin-left: 2.5rem;
+            }
+        }
+    }
+}
+@media  screen and (max-width : 800px) {
+    
+}
