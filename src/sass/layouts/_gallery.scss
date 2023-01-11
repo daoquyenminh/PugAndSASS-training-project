@@ -13,7 +13,7 @@
             height: 260px;
 
             margin: 4px;
-            border: 4px solid black;
+            border: 4px solid $secondaryColor;
             .img-case {
                 @include absolute-item;
                 img {
@@ -28,7 +28,7 @@
                 align-items: flex-end;
                 padding: 20px;
                 h2 {
-                    color: white;
+                    color: $fisrtColor;
                     text-transform: uppercase;
                     font-size: 1.2rem;
                     transform: translateY(2rem);
@@ -36,7 +36,7 @@
                     opacity: 0;
                 }
                 p{
-                    color: white;
+                    color: $fisrtColor;
                     transform: translateY(2rem);
                     transition: 0.3s;
                     opacity: 0;
@@ -54,7 +54,7 @@
 .gallery .container .card:hover {
     transform: scale(1.15);
     transition: 0.5s;
-    box-shadow: 0.25px 40px rgba($color: #000000, $alpha: 0.5) ;
+    box-shadow: 0.25px 40px rgba($color: $secondaryColor, $alpha: 0.5) ;
     z-index: 1;
 }
 
@@ -72,7 +72,7 @@
 .gallery .container .card .img-case::before {
     content: "";
     @include absolute-item;
-    background: linear-gradient(180deg, yellow,black);
+    background: linear-gradient(180deg, $fisrtColor,$secondaryColor);
     z-index: 1;
     opacity: 0;
     transition: 0.5s;
